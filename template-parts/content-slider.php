@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the slideshow loop
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ?>
@@ -12,7 +12,7 @@
 	<?php // Display Post Thumbnail or default thumbnail.
 	if ( has_post_thumbnail() ) :
 
-		the_post_thumbnail( 'delphine-slider-image', array( 'class' => 'slide-image' ) );
+		the_post_thumbnail( 'wellington-slider-image', array( 'class' => 'slide-image' ) );
 
 	else : ?>
 
@@ -22,14 +22,14 @@
 
 	<div class="slide-content clearfix">
 
-		<?php delphine_slider_meta(); ?>
+		<?php wellington_slider_meta(); ?>
 
 		<?php the_title( sprintf( '<h2 class="slide-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<div class="entry-content clearfix">
 
 			<?php the_excerpt(); ?>
-			<?php delphine_more_link(); ?>
+			<?php wellington_more_link(); ?>
 
 		</div><!-- .entry-content -->
 

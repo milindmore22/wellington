@@ -3,15 +3,15 @@
  *
  * Adds the Flexslider Plugin for the Featured Post Slideshow
  *
- * @package Delphine
+ * @package Wellington
  */
 
 jQuery( document ).ready(function($) {
 
 	/* Add flexslider to #post-slider div */
 	$( "#post-slider" ).flexslider({
-		animation: delphine_slider_params.animation,
-		slideshowSpeed: delphine_slider_params.speed,
+		animation: wellington_slider_params.animation,
+		slideshowSpeed: wellington_slider_params.speed,
 		namespace: "zeeflex-",
 		selector: ".zeeslides > li",
 		smoothHeight: true,

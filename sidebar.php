@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ?>
@@ -17,9 +17,9 @@
 		else : ?>
 
 			<aside class="widget clearfix">
-				<div class="widget-header"><h3 class="widget-title"><?php esc_html_e( 'Sidebar', 'delphine' ); ?></h3></div>
+				<div class="widget-header"><h3 class="widget-title"><?php esc_html_e( 'Sidebar', 'wellington' ); ?></h3></div>
 				<div class="textwidget">
-					<p><?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add some widgets to your sidebar.', 'delphine' ); ?></p>
+					<p><?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add some widgets to your sidebar.', 'wellington' ); ?></p>
 				</div>
 			</aside>
 

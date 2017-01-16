@@ -3,7 +3,7 @@
  *
  * Reloads changes on Theme Customizer Preview asynchronously for better usability
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ( function( $ ) {
@@ -23,7 +23,7 @@
 	} );
 
 	// Site Title checkbox.
-	wp.customize( 'delphine_theme_options[site_title]', function( value ) {
+	wp.customize( 'wellington_theme_options[site_title]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-title' );
@@ -34,7 +34,7 @@
 	} );
 
 	// Site Description checkbox.
-	wp.customize( 'delphine_theme_options[site_description]', function( value ) {
+	wp.customize( 'wellington_theme_options[site_description]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-description' );

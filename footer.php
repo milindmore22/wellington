@@ -4,23 +4,23 @@
  *
  * Contains all content after the main content area and sidebar
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ?>
 
 	</div><!-- #content -->
 
-	<?php do_action( 'delphine_before_footer' ); ?>
+	<?php do_action( 'wellington_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
 
 		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
 
-			<?php do_action( 'delphine_footer_menu' ); ?>
+			<?php do_action( 'wellington_footer_menu' ); ?>
 
 			<div id="footer-text" class="site-info">
-				<?php do_action( 'delphine_footer_text' ); ?>
+				<?php do_action( 'wellington_footer_text' ); ?>
 			</div><!-- .site-info -->
 
 		</footer><!-- #colophon -->

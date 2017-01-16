@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Delphine
+ * @package Wellington
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			delphine_related_posts();
+			wellington_related_posts();
 
 			comments_template();
 

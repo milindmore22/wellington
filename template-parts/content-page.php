@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ?>
@@ -22,7 +22,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'delphine' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wellington' ),
 			'after'  => '</div>',
 		) ); ?>
 

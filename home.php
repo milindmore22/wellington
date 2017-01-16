@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Delphine
+ * @package Wellington
  */
 
 get_header();
 
 // Get Theme Options from Database.
-$theme_options = delphine_theme_options();
+$theme_options = wellington_theme_options();
 
 // Display Slider.
 if ( true === $theme_options['slider_blog'] ) :
@@ -48,7 +48,7 @@ endif;
 
 			</div>
 
-			<?php delphine_pagination(); ?>
+			<?php wellington_pagination(); ?>
 
 		<?php
 		else :

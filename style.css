@@ -1,19 +1,19 @@
 /*
-Theme Name: Delphine
-Theme URI: https://themezee.com/themes/delphine/
+Theme Name: Wellington
+Theme URI: https://themezee.com/themes/wellington/
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: Delphine is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Delphine truly helps you to stand out.
+Description: Wellington is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Wellington truly helps you to stand out.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: delphine
+Text Domain: wellington
 Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, grid-layout, blog, entertainment, news, editor-style, rtl-language-support, grid-layout, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Delphine is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Wellington is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -748,9 +748,7 @@ textarea {
 }
 
 .header-image img {
-	max-width: 1280px;
-	width: auto;
-	height: auto;
+	max-width: 100%;
 	vertical-align: top;
 }
 
@@ -828,7 +826,7 @@ textarea {
 	color: #fff;
 	list-style-position: outside;
 	list-style-type: none;
-	border-top: 6px solid #ee3333;
+	border-top: 1px solid #fff;
 }
 
 .main-navigation-menu ul li{
@@ -865,6 +863,7 @@ textarea {
 .main-navigation-menu li ul ul {
 	top: 0;
 	left: 100%;
+	border-top: none;
 }
 
 .main-navigation-menu li.menu-item-has-children:hover > ul,
@@ -1845,18 +1844,22 @@ object {
 /*--------------------------------------------------------------
 ## 14.1 - Desktop X-Large ( < 1200px )
 --------------------------------------------------------------*/
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 85em) {
+	body {
+		padding: 1.5em;
+	}
+
 	.site {
-		padding: 0 3em;
+		margin: 0;
 	}
 
-	.site-content {
-		padding: 2em 0 1em;
+	.header-main {
+		padding: 2em;
 	}
 
-	.header-main,
-	.site-footer .site-info {
-		padding: 2em 0;
+	.content-area,
+	.sidebar {
+		padding: 2em 2em 0;
 	}
 
 	.widget,
@@ -1877,15 +1880,15 @@ object {
 	.post-layout-columns .post-wrapper .post-column {
 		padding-right: 2em;
 	}
-
 }
 
 /*--------------------------------------------------------------
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
-	.content-area {
-		padding-right: 3em;
+
+	body {
+		padding: 0;
 	}
 
 	.header-widget {
@@ -1909,10 +1912,6 @@ object {
 	}
 
 	/* One Column Layout */
-	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
-		max-width: 40%;
-	}
-
 	.post-layout-one-column .post-wrapper .type-post .entry-content {
 		font-size: 16px;
 		font-size: 1rem;
@@ -1941,17 +1940,18 @@ object {
 ## 14.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
-	.content-area,
-	.site-content .content-fullwidth {
-		float: none;
-		padding: 0;
+	.site-content {
+		display: block;
+	}
+
+	.content-area {
 		width: 100%;
 	}
 
 	.sidebar {
-		float: none;
-		padding: 0;
 		width: 100%;
+		border-left: none;
+		border-top: 1px solid #ddd;
 	}
 
 	.header-main {
@@ -1994,10 +1994,6 @@ object {
 	}
 
 	/* One Column Layout */
-	.post-layout-one-column .post-wrapper .type-post .wp-post-image {
-		max-width: 45%;
-	}
-
 	.post-layout-one-column .post-wrapper .type-post .entry-content {
 		font-size: 17px;
 		font-size: 1.0625rem;
@@ -2016,9 +2012,7 @@ object {
 		float: none;
 	}
 
-	.main-navigation-menu ul,
-	.mega-menu-item .mega-menu-content,
-	.mega-menu-item .mega-menu-content .mega-menu-widget {
+	.main-navigation-menu ul {
 		position: static;
 		top: auto;
 		left: auto;
@@ -2045,11 +2039,10 @@ object {
 	.main-navigation-toggle {
 		display: inline-block;
 		float: left;
-		margin: -1px 0 0;
-		padding: 0.8em 1em 1em;
-		border-top: 0.3em solid #303030;
-		background: #fff;
-		color: #303030;
+		margin: 0;
+		padding: 1em;
+		color: #fff;
+		background: none;
 	}
 
 	.main-navigation-toggle:hover,
@@ -2068,7 +2061,6 @@ object {
 		display: inline-block;
 		float: left;
 		margin: 0.15em 0.5em 0 0;
-		color: #303030;
 		content: '\f419';
 		vertical-align: top;
 		text-decoration: inherit;
@@ -2081,7 +2073,7 @@ object {
 
 	.main-navigation-toggle:active:before,
 	.main-navigation-toggle:hover:before {
-		color: #999;
+		color: rgba(255,255,255,0.5);
 	}
 
 	/* Main Navigation Menu */
@@ -2092,6 +2084,7 @@ object {
 		padding: 0;
 		width: 100%;
 		background: #303030;
+		border-top: 1px solid #fff;
 	}
 
 	.main-navigation-menu li {
@@ -2117,7 +2110,7 @@ object {
 
 	.main-navigation-menu a:hover,
 	.main-navigation-menu a:active {
-		background: rgba(255,255,255,0.1);
+		color: rgba(255,255,255,0.5);
 	}
 
 	.main-navigation-menu ul {
@@ -2149,7 +2142,7 @@ object {
 	}
 
 	.main-navigation-menu li.current-menu-item > a {
-		border-color: rgba(255,255,255,0.1);
+		background: rgba(255,255,255,0.075);
 	}
 
 	/* Mobile Submenu Dropdowns */
@@ -2157,15 +2150,18 @@ object {
 		display: block;
 		float: right;
 		margin: 0;
-		padding: 0.85em 1.2em;
+		padding: 0.9em 1.2em;
+		color: #fff;
+		background: none;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle:hover {
+	.main-navigation-menu .submenu-dropdown-toggle:hover,
+	.main-navigation-menu .submenu-dropdown-toggle:active {
 		cursor: pointer;
+		color: rgba(255,255,255,0.5);
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:before {
-		color: #fff;
 		content: '\f431';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2176,37 +2172,16 @@ object {
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle:hover,
-	.main-navigation-menu .submenu-dropdown-toggle:active {
-		background: rgba(255,255,255,0.1);
-	}
-
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
 		content: '\f432';
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle {
-		padding: 0.55em 1em;
+		padding: 0.65em 1em;
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle:before {
 		font-size: 24px;
-	}
-
-	/* Mega Menu Styling */
-	.mega-menu-item .mega-menu-content {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
-	}
-
-	.mega-menu-item .mega-menu-two-columns > li,
-	.mega-menu-item .mega-menu-three-columns > li,
-	.mega-menu-item .mega-menu-five-columns > li {
-		width: 100%;
-	}
-
-	.mega-menu-item .mega-menu-four-columns > li,
-	.mega-menu-item .mega-menu-six-columns > li {
-		width: 50%;
 	}
 
 	/* Magazine Post Widgets */
@@ -2232,8 +2207,32 @@ object {
 ## 14.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-	.site {
-		padding: 0 2em;
+	.header-main {
+		padding: 1em 1.5em 1.5em;
+	}
+
+	.content-area,
+	.sidebar {
+		padding: 1.5em 1.5em 0;
+	}
+
+	.widget,
+	.page-header,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 1.5em;
+	}
+
+	/* Multiple Post Columns */
+	.post-layout-columns .post-wrapper {
+		margin-right: -1.5em;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		padding-right: 1.5em;
 	}
 
 	.page-title,
@@ -2355,19 +2354,31 @@ object {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-
-	/* Mega Menu Styling */
-	.mega-menu-item .mega-menu-four-columns > li,
-	.mega-menu-item .mega-menu-six-columns > li {
-		width: 100%;
-	}
-
 }
 
 /*--------------------------------------------------------------
 ## 14.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
+	.header-main {
+		padding: 0.75em 1.25em 1.25em;
+	}
+
+	.content-area,
+	.sidebar {
+		padding: 1.25em 1.25em 0;
+	}
+
+	.widget,
+	.page-header,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination,
+	.comments-area {
+		margin-bottom: 1.25em;
+	}
+
 	.site-branding .site-title {
 		font-size: 36px;
 		font-size: 2.25rem;

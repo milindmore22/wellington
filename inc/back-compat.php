@@ -1,12 +1,12 @@
 <?php
 /**
- * Delphine back compat functionality
+ * Wellington back compat functionality
  *
- * Prevents Delphine from running on WordPress versions prior to 4.4,
+ * Prevents Wellington from running on WordPress versions prior to 4.4,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.4.
  *
- * @package Delphine
+ * @package Wellington
  *
  * Original Code: Twenty Sixteen http://wordpress.org/themes/twentysixteen
  * Original Copyright: the WordPress team and contributors.
@@ -17,28 +17,28 @@
  */
 
 /**
- * Prevent switching to Delphine on old versions of WordPress.
+ * Prevent switching to Wellington on old versions of WordPress.
  * Switches to the default theme.
  */
-function delphine_switch_theme() {
+function wellington_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 
 	unset( $_GET['activated'] );
 
-	add_action( 'admin_notices', 'delphine_upgrade_notice' );
+	add_action( 'admin_notices', 'wellington_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'delphine_switch_theme' );
+add_action( 'after_switch_theme', 'wellington_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Delphine on WordPress versions prior to 4.4.
+ * Wellington on WordPress versions prior to 4.4.
  *
  * @global string $wp_version WordPress version.
  */
-function delphine_upgrade_notice() {
-	$message = sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'delphine' ), 'Delphine', '4.4', $GLOBALS['wp_version'] );
+function wellington_upgrade_notice() {
+	$message = sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'wellington' ), 'Wellington', '4.4', $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -47,21 +47,21 @@ function delphine_upgrade_notice() {
  *
  * @global string $wp_version WordPress version.
  */
-function delphine_customize() {
-	wp_die( sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'delphine' ), 'Delphine', '4.4', $GLOBALS['wp_version'] ), '', array(
+function wellington_customize() {
+	wp_die( sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'wellington' ), 'Wellington', '4.4', $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
-add_action( 'load-customize.php', 'delphine_customize' );
+add_action( 'load-customize.php', 'wellington_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.4.
  *
  * @global string $wp_version WordPress version.
  */
-function delphine_preview() {
+function wellington_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'delphine' ), 'Delphine', '4.4', $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( esc_html__( '%1$s requires at least WordPress version %2$s. You are running version %3$s. Please upgrade and try again.', 'wellington' ), 'Wellington', '4.4', $GLOBALS['wp_version'] ) );
 	}
 }
-add_action( 'template_redirect', 'delphine_preview' );
+add_action( 'template_redirect', 'wellington_preview' );

@@ -8,7 +8,7 @@
  *
  * Author: Thomas Weichselbaumer (themezee.com)
  *
- * @package Delphine
+ * @package Wellington
  */
 
 (function($) {
@@ -143,7 +143,7 @@
 		$( '#main-navigation' ).responsiveMenu( {
 			menuClass: 'main-navigation-menu',
 			toggleClass: 'main-navigation-toggle',
-			toggleText: delphine_menu_title,
+			toggleText: wellington_menu_title,
 			maxWidth: '60em'
 		} );
 

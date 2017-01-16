@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Delphine\n"
+"Project-Id-Version: Wellington\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2016-09-16 12:49+0100\n"
 "PO-Revision-Date: 2016-09-16 12:49+0100\n"
@@ -178,7 +178,7 @@ msgid "Theme Links"
 msgstr ""
 
 #: inc/theme-info.php:47 inc/customizer/customizer.php:145
-msgid "https://themezee.com/themes/delphine/"
+msgid "https://themezee.com/themes/wellington/"
 msgstr ""
 
 #: inc/theme-info.php:47 inc/customizer/customizer.php:146
@@ -191,7 +191,7 @@ msgstr ""
 
 #: inc/theme-info.php:49 inc/theme-info.php:70
 #: inc/customizer/customizer.php:157
-msgid "https://themezee.com/docs/delphine-documentation/"
+msgid "https://themezee.com/docs/wellington-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:49 inc/theme-info.php:64
@@ -201,7 +201,7 @@ msgstr ""
 
 #: inc/theme-info.php:50 inc/theme-info.php:152
 #: inc/customizer/customizer.php:163
-msgid "https://wordpress.org/support/theme/delphine/reviews/?filter=5"
+msgid "https://wordpress.org/support/theme/wellington/reviews/?filter=5"
 msgstr ""
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:164
@@ -255,7 +255,7 @@ msgid ""
 msgstr ""
 
 #: inc/theme-info.php:116 inc/customizer/functions/custom-controls.php:106
-msgid "https://themezee.com/addons/delphine-pro/"
+msgid "https://themezee.com/addons/wellington-pro/"
 msgstr ""
 
 #: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:107
@@ -287,7 +287,7 @@ msgid "https://themezee.com/"
 msgstr ""
 
 #: inc/theme-info.php:152
-msgid "Review Delphine"
+msgid "Review Wellington"
 msgstr ""
 
 #: inc/theme-info.php:152

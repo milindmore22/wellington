@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Delphine
+ * @package Wellington
  */
 
 get_header();
 
 // Get Theme Options from Database.
-$theme_options = delphine_theme_options();
+$theme_options = wellington_theme_options();
 ?>
 
 	<section id="primary" class="content-archive content-area">
@@ -21,7 +21,7 @@ $theme_options = delphine_theme_options();
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'delphine' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'wellington' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 				<p><?php get_search_form(); ?></p>
 
 			</header><!-- .page-header -->
@@ -44,7 +44,7 @@ $theme_options = delphine_theme_options();
 
 			</div>
 
-			<?php delphine_pagination(); ?>
+			<?php wellington_pagination(); ?>
 
 		<?php
 		else :

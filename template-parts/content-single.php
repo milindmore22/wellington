@@ -2,18 +2,18 @@
 /**
  * The template for displaying single posts
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php delphine_post_image_single(); ?>
+	<?php wellington_post_image_single(); ?>
 
 	<header class="entry-header">
 
-		<?php delphine_entry_meta(); ?>
+		<?php wellington_entry_meta(); ?>
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
@@ -24,7 +24,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'delphine' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wellington' ),
 			'after'  => '</div>',
 		) ); ?>
 
@@ -32,9 +32,9 @@
 
 	<footer class="entry-footer">
 
-		<?php delphine_entry_categories(); ?>
-		<?php delphine_entry_tags(); ?>
-		<?php delphine_post_navigation(); ?>
+		<?php wellington_entry_categories(); ?>
+		<?php wellington_entry_tags(); ?>
+		<?php wellington_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
 

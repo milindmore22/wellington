@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package Delphine
+ * @package Wellington
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 		</div><!-- .entry-content -->
 
-		<div class="read-more"><?php delphine_more_link(); ?></div>
+		<div class="read-more"><?php wellington_more_link(); ?></div>
 
 	</article>
 
