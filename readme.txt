@@ -8,11 +8,11 @@ Tested up to: 4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Wellington is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout.
+Wellington is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
 
 == Description ==
 
-Wellington is a minimalistic and elegant WordPress theme featuring an ultra clean magazine layout. With a beautiful typography, various post layouts and a gorgeous featured posts slideshow Wellington truly helps you to stand out.
+Wellington is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors. The theme includes two different post layouts, a featured post slider and thoughtful theme settings in the Customizer.
 
 For more information about Wellington please go to https://themezee.com/themes/wellington/
 
@@ -31,7 +31,7 @@ Initial Release
 
 == Copyright ==
 
-Wellington WordPress Theme, Copyright 2016 ThemeZee.com
+Wellington WordPress Theme, Copyright 2017 ThemeZee.com
 Wellington is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -64,24 +64,24 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Gudea Font - https://www.google.com/fonts/specimen/Titillium+Web
+5. Gudea Font - https://www.google.com/fonts/specimen/Gudea
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: 2013 Accademia di Belle Arti di Urbino
+Copyright: Agustina Mingote
 
 6. Magra Font - https://www.google.com/fonts/specimen/Magra
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: Gesine Todt
+Copyright: FontFuror
 
 7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
-Image 1: https://pixabay.com/en/architecture-modern-building-facade-1048092/
+Image 1: https://pixabay.com/en/bottom-bracket-gear-mountain-bike-1204870/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2015 Michael Gaida (https://pixabay.com/en/users/MichaelGaida-652234/)
+Copyright: 2015 Stefan Schweihofer (https://pixabay.com/en/users/stux-12364/)
 
-Image 2:https://pixabay.com/en/building-monument-view-cityscape-1031524/
+Image 2: https://pixabay.com/en/ice-hockey-goalie-goal-sport-team-557578/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2016 Unsplash (https://pixabay.com/en/users/Unsplash-242387/)
+Copyright: 2007 skeeze (https://pixabay.com/en/users/skeeze-272447/)
 
-Image 3: https://pixabay.com/en/riga-housewife-art-nouveau-1085269/
+Image 3: https://pixabay.com/en/sports-skate-sport-teens-together-1260307/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2014 Monika Neumann (https://pixabay.com/en/users/monikawl999-1744293/)
+Copyright: 2014 FlorVegana (https://pixabay.com/en/users/FlorVegana-2142832/)
