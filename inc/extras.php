@@ -28,16 +28,16 @@ function wellington_body_classes( $classes ) {
 	// Get theme options from database.
 	$theme_options = wellington_theme_options();
 
-	// Switch sidebar layout to left.
-	if ( 'left-sidebar' == $theme_options['layout'] ) {
+	// Check if sidebar widget area is empty or switch sidebar layout to left.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	} elseif ( 'left-sidebar' == $theme_options['layout'] ) {
 		$classes[] = 'sidebar-left';
 	}
 
 	// Add post columns classes.
 	if ( 'two-columns' == $theme_options['post_layout'] ) {
 		$classes[] = 'post-layout-two-columns post-layout-columns';
-	} elseif ( 'three-columns' == $theme_options['post_layout'] ) {
-		$classes[] = 'post-layout-three-columns post-layout-columns';
 	} else {
 		$classes[] = 'post-layout-one-column';
 	}

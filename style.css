@@ -654,6 +654,17 @@ textarea {
 	background: #fafafa;
 }
 
+/* No Sidebar & Centered Layout Template */
+.no-sidebar .site-content {
+	display: block;
+}
+
+.no-sidebar .content-area {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
 /* Fullwidth Template */
 .site-content .content-fullwidth {
 	float: none;
