@@ -655,21 +655,24 @@ textarea {
 }
 
 /* No Sidebar & Centered Layout Template */
-.no-sidebar .site-content {
+.no-sidebar .site-content,
+.centered-content-area {
 	display: block;
 }
 
-.no-sidebar .content-area {
+.no-sidebar .content-area,
+.site-content .centered-content-area {
 	width: 100%;
 	max-width: 900px;
 	margin: 0 auto;
 }
 
 /* Fullwidth Template */
-.site-content .content-fullwidth {
+.site-content .fullwidth-content-area {
 	float: none;
-	padding: 0;
+	margin: 0;
 	width: 100%;
+	max-width: 100%;
 }
 
 /*--------------------------------------------------------------
