@@ -675,6 +675,16 @@ textarea {
 	max-width: 100%;
 }
 
+/* Fix Render Bug for Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.content-area,
+		.sidebar {
+			margin-right: -1px;
+		}
+	}
+}
+
 /*--------------------------------------------------------------
 # 9.0 - Header
 --------------------------------------------------------------*/
