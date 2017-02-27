@@ -1349,6 +1349,18 @@ textarea {
 	background: #ddd;
 }
 
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .entry-meta .meta-date,
+body.author-hidden .entry-meta .meta-author {
+	 position: absolute;
+	 clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.author-hidden .entry-meta .meta-date:after,
+body.date-hidden.author-hidden .content-area .entry-meta {
+	display: none;
+}
+
 /* Entry Tags & Tagcloud Widget */
 .entry-tags {
 	margin: 0 0 1.5em;

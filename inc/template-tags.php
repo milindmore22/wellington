@@ -149,30 +149,10 @@ if ( ! function_exists( 'wellington_entry_meta' ) ) :
 	 */
 	function wellington_entry_meta() {
 
-		// Get theme options from database.
-		$theme_options = wellington_theme_options();
+		$postmeta = wellington_meta_date();
+		$postmeta .= wellington_meta_author();
 
-		$postmeta = '';
-
-		// Display date unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_date'] ) {
-
-			$postmeta .= wellington_meta_date();
-
-		}
-
-		// Display categories unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_author'] ) {
-
-			$postmeta .= wellington_meta_author();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
@@ -241,24 +221,15 @@ if ( ! function_exists( 'wellington_entry_categories' ) ) :
 	 * Displays the category of posts
 	 */
 	function wellington_entry_categories() {
+		?>
 
-		// Get theme options from database.
-		$theme_options = wellington_theme_options();
-
-		// Get tags.
-		$categories = get_the_category_list( ' ' );
-
-		// Display tags.
-		if ( true === $theme_options['meta_category'] ) : ?>
-
-			<div class="entry-categories clearfix">
-				<span class="meta-categories">
-					<?php echo $categories; ?>
-				</span>
-			</div><!-- .entry-categories -->
+		<div class="entry-categories clearfix">
+			<span class="meta-categories">
+				<?php echo get_the_category_list( ' ' ); ?>
+			</span>
+		</div><!-- .entry-categories -->
 
 		<?php
-		endif;
 	}
 endif;
 
@@ -269,14 +240,11 @@ if ( ! function_exists( 'wellington_entry_tags' ) ) :
 	 */
 	function wellington_entry_tags() {
 
-		// Get theme options from database.
-		$theme_options = wellington_theme_options();
-
 		// Get tags.
 		$tag_list = get_the_tag_list( '', '' );
 
 		// Display tags.
-		if ( $tag_list && $theme_options['meta_tags'] ) : ?>
+		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -313,7 +281,7 @@ if ( ! function_exists( 'wellington_post_navigation' ) ) :
 		// Get theme options from database.
 		$theme_options = wellington_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'wellington' ) . '</span>%title',
