@@ -1158,8 +1158,8 @@ textarea {
 	width: 50%;
 }
 
-.widget-magazine-posts .magazine-grid .post-column:nth-child(3n) .large-post,
-.widget-magazine-posts .magazine-grid .post-column:nth-child(4n) .medium-post {
+.widget-magazine-posts .magazine-grid .post-column:nth-child(2n+1) .large-post,
+.widget-magazine-posts .magazine-grid .post-column:nth-child(3n+1) .medium-post {
     clear: left;
 }
 
