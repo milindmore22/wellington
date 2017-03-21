@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'wellington' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'wellington' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				<p><?php get_search_form(); ?></p>
 
 			</header><!-- .page-header -->

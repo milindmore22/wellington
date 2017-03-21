@@ -2,7 +2,7 @@
 Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/wellington/
 Contributors: themezee
-Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, grid-layout, blog, entertainment, news, editor-style, rtl-language-support, grid-layout, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.4
 Tested up to: 4.7
 License: GPLv2 or later
@@ -25,6 +25,9 @@ For more information about Wellington please go to https://themezee.com/themes/w
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.0.4 =
+* fixed smaller issues for wordpress.org theme review
 
 = 1.0.3 =
 * updated post slider
@@ -79,15 +82,19 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Gudea Font - https://www.google.com/fonts/specimen/Gudea
+5. HTML5 Shiv - https://github.com/aFarkas/html5shiv
+License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright: 2015 @afarkas @jdalton @jon_neal @rem
+
+6. Gudea Font - https://www.google.com/fonts/specimen/Gudea
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: Agustina Mingote
 
-6. Magra Font - https://www.google.com/fonts/specimen/Magra
+7. Magra Font - https://www.google.com/fonts/specimen/Magra
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: FontFuror
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/bottom-bracket-gear-mountain-bike-1204870/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)

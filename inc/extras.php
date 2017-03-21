@@ -117,6 +117,10 @@ add_filter( 'wp_enqueue_scripts', 'wellington_hide_elements', 11 );
  */
 function wellington_excerpt_length( $length ) {
 
+	if ( is_admin() ) {
+		return $length;
+	}
+
 	// Get theme options from database.
 	$theme_options = wellington_theme_options();
 
@@ -137,6 +141,11 @@ add_filter( 'excerpt_length', 'wellington_excerpt_length' );
  * @return string
  */
 function wellington_excerpt_more( $more_text ) {
+
+	if ( is_admin() ) {
+		return $more_text;
+	}
+
 	return '';
 }
 add_filter( 'excerpt_more', 'wellington_excerpt_more' );

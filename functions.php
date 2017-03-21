@@ -51,7 +51,7 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'wellington_custom_background_args', array( 'default-color' => '303030' ) ) );
+		add_theme_support( 'custom-background', apply_filters( 'wellington_custom_background_args', array( 'default-color' => 'e5e5e5' ) ) );
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'wellington_custom_logo_args', array(
