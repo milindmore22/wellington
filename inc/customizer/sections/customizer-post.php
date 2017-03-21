@@ -22,30 +22,9 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
-	// Add Post Layout Settings for archive posts.
-	$wp_customize->add_setting( 'wellington_theme_options[post_layout]', array(
-		'default'           => 'one-column',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'wellington_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'wellington_theme_options[post_layout]', array(
-		'label'    => esc_html__( 'Post Layout (archive pages)', 'wellington' ),
-		'section'  => 'wellington_section_post',
-		'settings' => 'wellington_theme_options[post_layout]',
-		'type'     => 'select',
-		'priority' => 1,
-		'choices'  => array(
-			'one-column' => esc_html__( 'One Column', 'wellington' ),
-			'two-columns' => esc_html__( 'Two Columns', 'wellington' ),
-			),
-		)
-	);
-
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'wellington_theme_options[excerpt_length]', array(
-		'default'           => 20,
+		'default'           => 10,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'absint',
@@ -73,7 +52,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'label' => esc_html__( 'Post Meta', 'wellington' ),
 		'section' => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[postmeta_headline]',
-		'priority' => 3,
+		'priority' => 20,
 		)
 	) );
 
@@ -89,23 +68,23 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 4,
+		'priority' => 30,
 		)
 	);
 
-	$wp_customize->add_setting( 'wellington_theme_options[meta_category]', array(
+	$wp_customize->add_setting( 'wellington_theme_options[meta_author]', array(
 		'default'           => true,
 		'type'           	=> 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wellington_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'wellington_theme_options[meta_category]', array(
-		'label'    => esc_html__( 'Display post categories', 'wellington' ),
+	$wp_customize->add_control( 'wellington_theme_options[meta_author]', array(
+		'label'    => esc_html__( 'Display post author', 'wellington' ),
 		'section'  => 'wellington_section_post',
-		'settings' => 'wellington_theme_options[meta_category]',
+		'settings' => 'wellington_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 5,
+		'priority' => 40,
 		)
 	);
 
@@ -122,7 +101,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'label' => esc_html__( 'Single Posts', 'wellington' ),
 		'section' => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[single_post_headline]',
-		'priority' => 6,
+		'priority' => 50,
 		)
 	) );
 
@@ -139,23 +118,23 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[post_image_single]',
 		'type'     => 'checkbox',
-		'priority' => 7,
+		'priority' => 60,
 		)
 	);
 
-	$wp_customize->add_setting( 'wellington_theme_options[meta_author]', array(
+	$wp_customize->add_setting( 'wellington_theme_options[meta_category]', array(
 		'default'           => true,
 		'type'           	=> 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wellington_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'wellington_theme_options[meta_author]', array(
-		'label'    => esc_html__( 'Display post author on single posts', 'wellington' ),
+	$wp_customize->add_control( 'wellington_theme_options[meta_category]', array(
+		'label'    => esc_html__( 'Display post categories on single posts', 'wellington' ),
 		'section'  => 'wellington_section_post',
-		'settings' => 'wellington_theme_options[meta_author]',
+		'settings' => 'wellington_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 8,
+		'priority' => 70,
 		)
 	);
 
@@ -171,7 +150,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 9,
+		'priority' => 80,
 		)
 	);
 
@@ -187,7 +166,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 10,
+		'priority' => 90,
 		)
 	);
 

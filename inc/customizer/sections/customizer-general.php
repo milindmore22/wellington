@@ -35,10 +35,31 @@ function wellington_customize_register_general_settings( $wp_customize ) {
 		'section'  => 'wellington_section_general',
 		'settings' => 'wellington_theme_options[layout]',
 		'type'     => 'radio',
-		'priority' => 1,
+		'priority' => 10,
 		'choices'  => array(
 			'left-sidebar' => esc_html__( 'Left Sidebar', 'wellington' ),
 			'right-sidebar' => esc_html__( 'Right Sidebar', 'wellington' ),
+			),
+		)
+	);
+
+	// Add Post Layout Settings for archive posts.
+	$wp_customize->add_setting( 'wellington_theme_options[post_layout]', array(
+		'default'           => 'one-column',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wellington_sanitize_select',
+		)
+	);
+	$wp_customize->add_control( 'wellington_theme_options[post_layout]', array(
+		'label'    => esc_html__( 'Blog Layout', 'wellington' ),
+		'section'  => 'wellington_section_general',
+		'settings' => 'wellington_theme_options[post_layout]',
+		'type'     => 'select',
+		'priority' => 20,
+		'choices'  => array(
+			'one-column' => esc_html__( 'One Column', 'wellington' ),
+			'two-columns' => esc_html__( 'Two Columns', 'wellington' ),
 			),
 		)
 	);
@@ -56,7 +77,7 @@ function wellington_customize_register_general_settings( $wp_customize ) {
 		'section'  => 'wellington_section_general',
 		'settings' => 'wellington_theme_options[blog_title]',
 		'type'     => 'text',
-		'priority' => 3,
+		'priority' => 30,
 		)
 	);
 
@@ -73,7 +94,7 @@ function wellington_customize_register_general_settings( $wp_customize ) {
 		'section'  => 'wellington_section_general',
 		'settings' => 'wellington_theme_options[blog_description]',
 		'type'     => 'textarea',
-		'priority' => 4,
+		'priority' => 40,
 		)
 	);
 

@@ -11,13 +11,6 @@ get_header();
 
 // Get Theme Options from Database.
 $theme_options = wellington_theme_options();
-
-// Display Slider.
-if ( true === $theme_options['slider_blog'] ) :
-
-	get_template_part( 'template-parts/post-slider' );
-
-endif;
 ?>
 
 	<section id="primary" class="content-archive content-area">
@@ -72,11 +65,6 @@ endif;
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-	<?php // Do not display Sidebar on Three Column Post Layout.
-	if ( 'three-columns' !== $theme_options['post_layout'] ) :
-
-		get_sidebar();
-
-	endif; ?>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

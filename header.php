@@ -74,6 +74,8 @@
 
 		<?php wellington_header_image(); ?>
 
-		<div id="content" class="site-content container clearfix">
+		<?php wellington_slider(); ?>
 
-			<?php wellington_breadcrumbs(); ?>
+		<?php wellington_breadcrumbs(); ?>
+
+		<div id="content" class="site-content container clearfix">

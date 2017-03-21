@@ -26,7 +26,7 @@ if ( $slider_query->have_posts() ) :
 
 ?>
 
-	<div id="post-slider-container" class="post-slider-container type-page clearfix">
+	<div id="post-slider-container" class="post-slider-container clearfix">
 
 		<div id="post-slider-wrap" class="post-slider-wrap clearfix">
 

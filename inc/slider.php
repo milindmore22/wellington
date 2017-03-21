@@ -19,7 +19,7 @@ function wellington_slider_scripts() {
 	$theme_options = wellington_theme_options();
 
 	// Register and enqueue FlexSlider JS and CSS if necessary.
-	if ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) :
+	if ( true === $theme_options['slider_active'] && is_front_page() ) :
 
 		// FlexSlider JS.
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
@@ -43,7 +43,7 @@ add_action( 'wp_enqueue_scripts', 'wellington_slider_scripts' );
  * @return int
  */
 function wellington_slider_excerpt_length( $length ) {
-	return 20;
+	return 15;
 }
 
 
@@ -58,7 +58,7 @@ if ( ! function_exists( 'wellington_slider_meta' ) ) :
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 
-	} // wellington_slider_meta()
+	}
 endif;
 
 
@@ -86,3 +86,20 @@ function wellington_slider_options() {
 
 }
 add_action( 'wp_enqueue_scripts', 'wellington_slider_options' );
+
+
+/**
+ * Display Post Slider
+ */
+function wellington_slider() {
+
+	// Get theme options from database.
+	$theme_options = wellington_theme_options();
+
+	// Display post slider only if activated.
+	if ( true === $theme_options['slider_active'] && is_front_page() ) :
+
+		get_template_part( 'template-parts/post-slider' );
+
+	endif;
+}

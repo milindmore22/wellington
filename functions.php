@@ -197,7 +197,7 @@ function wellington_google_fonts_url() {
 function wellington_add_image_sizes() {
 
 	// Add Slider Image Size.
-	add_image_size( 'wellington-slider-image', 850, 500, true );
+	add_image_size( 'wellington-slider-image', 1280, 450, true );
 
 	// Add different thumbnail sizes for Magazine Posts widgets.
 	add_image_size( 'wellington-thumbnail-small', 120, 80, true );

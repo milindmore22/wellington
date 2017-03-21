@@ -7,11 +7,7 @@
  * @package Wellington
  */
 
-get_header();
-
-// Get Theme Options from Database.
-$theme_options = wellington_theme_options();
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -48,11 +44,6 @@ $theme_options = wellington_theme_options();
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-	<?php // Do not display Sidebar on Three Column Post Layout.
-	if ( 'three-columns' !== $theme_options['post_layout'] ) :
-
-		get_sidebar();
-
-	endif; ?>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
