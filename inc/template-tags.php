@@ -102,6 +102,36 @@ if ( ! function_exists( 'wellington_header_image' ) ) :
 endif;
 
 
+if ( ! function_exists( 'wellington_blog_title' ) ) :
+	/**
+	 * Displays the archive title and archive description for the blog index
+	 */
+	function wellington_blog_title() {
+
+		// Get theme options from database.
+		$theme_options = wellington_theme_options();
+
+		// Display Blog Title.
+		if ( '' !== $theme_options['blog_title'] ) : ?>
+
+			<header class="page-header clearfix">
+
+				<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+
+				<?php // Display Blog Description
+				if ( '' !== $theme_options['blog_description'] ) : ?>
+
+					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
+
+				<?php endif; ?>
+
+			</header>
+
+		<?php endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'wellington_post_image' ) ) :
 	/**
 	 * Displays the featured image on archive posts.

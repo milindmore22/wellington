@@ -7,11 +7,7 @@
  * @package Wellington
  */
 
-get_header();
-
-// Get Theme Options from Database.
-$theme_options = wellington_theme_options();
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -31,17 +27,7 @@ $theme_options = wellington_theme_options();
 
 		if ( have_posts() ) :
 
-			// Display Homepage Title.
-			if ( '' !== $theme_options['blog_title'] ) : ?>
-
-				<header class="page-header clearfix">
-
-					<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
-					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
-
-				</header>
-
-			<?php endif; ?>
+			wellington_blog_title(); ?>
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 
