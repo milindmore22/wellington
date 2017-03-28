@@ -26,6 +26,11 @@ For more information about Wellington please go to https://themezee.com/themes/w
 
 == Changelog ==
 
+= 1.0.5 =
+* added own template function to display blog title and description
+* added extra template files for Magazine Widgets
+* improved Right-to-Left Language Stylesheets
+
 = 1.0.4 =
 * fixed smaller issues for wordpress.org theme review
 

@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/wellington/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Wellington is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors. The theme includes two different post layouts, a featured post slider and thoughtful theme settings in the Customizer.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wellington
@@ -638,6 +638,8 @@ textarea {
 	display: flex;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
 }
 
 .content-area {
@@ -647,9 +649,9 @@ textarea {
 }
 
 .sidebar {
-	width: 30%;
-	padding: 3em 3em 0;
 	box-sizing: border-box;
+	padding: 3em 3em 0;
+	width: 30%;
 	border-left: 1px solid #ddd;
 	background: #fafafa;
 }
@@ -662,17 +664,17 @@ textarea {
 
 .no-sidebar .content-area,
 .site-content .centered-content-area {
-	width: 100%;
-	max-width: 900px;
 	margin: 0 auto;
+	max-width: 900px;
+	width: 100%;
 }
 
 /* Fullwidth Template */
 .site-content .fullwidth-content-area {
 	float: none;
 	margin: 0;
-	width: 100%;
 	max-width: 100%;
+	width: 100%;
 }
 
 /* Fix Render Bug for Safari */
@@ -846,11 +848,11 @@ textarea {
 	display: none;
 	margin: 0;
 	padding: 0;
+	border-top: 1px solid #fff;
 	background: #303030;
 	color: #fff;
 	list-style-position: outside;
 	list-style-type: none;
-	border-top: 1px solid #fff;
 }
 
 .main-navigation-menu ul li{
@@ -1348,8 +1350,8 @@ textarea {
 
 .entry-categories .meta-categories a:hover,
 .entry-categories .meta-categories a:active {
-	color: #303030;
 	background: #ddd;
+	color: #303030;
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -1522,11 +1524,11 @@ body.date-hidden.author-hidden .content-area .entry-meta {
 
 /* Breadcrumbs */
 .breadcrumbs {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0.5em 1.5em;
-	border-bottom: 1px solid #ddd;
 	width: 100%;
-	box-sizing: border-box;
+	border-bottom: 1px solid #ddd;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1941,7 +1943,6 @@ object {
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
-
 	body {
 		padding: 0;
 	}
@@ -2005,8 +2006,8 @@ object {
 
 	.sidebar {
 		width: 100%;
-		border-left: none;
 		border-top: 1px solid #ddd;
+		border-left: none;
 	}
 
 	.header-main {
@@ -2096,8 +2097,8 @@ object {
 		float: left;
 		margin: 0;
 		padding: 1em;
-		color: #fff;
 		background: none;
+		color: #fff;
 	}
 
 	.main-navigation-toggle:hover,
@@ -2184,14 +2185,14 @@ object {
 		float: right;
 		margin: 0;
 		padding: 0.9em 1.2em;
-		color: #fff;
 		background: none;
+		color: #fff;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover,
 	.main-navigation-menu .submenu-dropdown-toggle:active {
-		cursor: pointer;
 		color: rgba(255,255,255,0.5);
+		cursor: pointer;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:before {
@@ -2501,9 +2502,9 @@ object {
 }
 
 .sidebar-left .sidebar {
-	border-left: none;
-	border-right: 1px solid #ddd;
 	order: 1;
+	border-right: 1px solid #ddd;
+	border-left: none;
 	-webkit-box-ordinal-group: 2;
 	-ms-flex-order: 1;
 }
