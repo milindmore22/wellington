@@ -731,6 +731,10 @@ textarea {
 	color: #ee3333;
 }
 
+.site-branding .custom-logo-link {
+	display: block;
+}
+
 .site-branding .custom-logo {
 	margin: 0.5em 1em 0 0;
 	padding: 0;
