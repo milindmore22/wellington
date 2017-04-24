@@ -115,4 +115,5 @@ function wellington_flush_magazine_post_ids() {
 }
 add_action( 'save_post', 'wellington_flush_magazine_post_ids' );
 add_action( 'deleted_post', 'wellington_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'wellington_flush_magazine_post_ids' );
 add_action( 'switch_theme', 'wellington_flush_magazine_post_ids' );
