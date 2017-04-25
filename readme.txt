@@ -27,9 +27,11 @@ For more information about Wellington please go to https://themezee.com/themes/w
 == Changelog ==
 
 = 1.0.7 =
+* added transient caching to post slider
 * added post hyperlinks to slider images in post slider
 * added own template function to display slider image for better child theme support
 * fixed slider images getting stretched when too small images are uploaded
+* improved Right-to-Left language stylesheets
 
 = 1.0.6 =
 * fixed flexbox layout issues appearing with the latest Safari 10.1 version
