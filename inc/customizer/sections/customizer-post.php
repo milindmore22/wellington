@@ -101,22 +101,6 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		)
 	) );
 
-	// Featured Image Setting.
-	$wp_customize->add_setting( 'wellington_theme_options[post_image_single]', array(
-		'default'           => true,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'wellington_sanitize_checkbox',
-	) );
-
-	$wp_customize->add_control( 'wellington_theme_options[post_image_single]', array(
-		'label'    => esc_html__( 'Display featured image on single posts', 'wellington' ),
-		'section'  => 'wellington_section_post',
-		'settings' => 'wellington_theme_options[post_image_single]',
-		'type'     => 'checkbox',
-		'priority' => 60,
-	) );
-
 	$wp_customize->add_setting( 'wellington_theme_options[meta_category]', array(
 		'default'           => true,
 		'type'           	=> 'option',
@@ -129,7 +113,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 60,
 	) );
 
 	$wp_customize->add_setting( 'wellington_theme_options[meta_tags]', array(
@@ -144,7 +128,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 80,
+		'priority' => 70,
 	) );
 
 	$wp_customize->add_setting( 'wellington_theme_options[post_navigation]', array(
@@ -159,7 +143,49 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 90,
+		'priority' => 80,
+	) );
+
+	// Add Featured Images Headline.
+	$wp_customize->add_control( new Wellington_Customize_Header_Control(
+		$wp_customize, 'wellington_theme_options[featured_images]', array(
+			'label'    => esc_html__( 'Featured Images', 'wellington' ),
+			'section'  => 'wellington_section_post',
+			'settings' => array(),
+			'priority' => 90,
+		)
+	) );
+
+	// Add Setting and Control for featured images on blog and archives.
+	$wp_customize->add_setting( 'wellington_theme_options[post_image_archives]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wellington_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'wellington_theme_options[post_image_archives]', array(
+		'label'    => esc_html__( 'Display on blog and archives', 'wellington' ),
+		'section'  => 'wellington_section_post',
+		'settings' => 'wellington_theme_options[post_image_archives]',
+		'type'     => 'checkbox',
+		'priority' => 100,
+	) );
+
+	// Add Setting and Control for featured images on single posts.
+	$wp_customize->add_setting( 'wellington_theme_options[post_image_single]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'wellington_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'wellington_theme_options[post_image_single]', array(
+		'label'    => esc_html__( 'Display on single posts', 'wellington' ),
+		'section'  => 'wellington_section_post',
+		'settings' => 'wellington_theme_options[post_image_single]',
+		'type'     => 'checkbox',
+		'priority' => 110,
 	) );
 }
 add_action( 'customize_register', 'wellington_customize_register_post_settings' );
