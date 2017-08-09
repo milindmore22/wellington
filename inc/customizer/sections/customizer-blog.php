@@ -25,7 +25,7 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'wellington_theme_options[post_layout]', array(
 		'default'           => 'one-column',
 		'type'              => 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wellington_sanitize_select',
 		)
 	);
@@ -39,6 +39,12 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 			'one-column'  => esc_html__( 'One Column', 'wellington' ),
 			'two-columns' => esc_html__( 'Two Columns', 'wellington' ),
 		),
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'wellington_theme_options[post_layout]', array(
+		'selector'         => '.site-main .post-wrapper',
+		'render_callback'  => 'wellington_customize_partial_blog_layout',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Blog Title setting and control.
@@ -127,4 +133,14 @@ function wellington_customize_partial_blog_title() {
 function wellington_customize_partial_blog_description() {
 	$theme_options = wellington_theme_options();
 	echo wp_kses_post( $theme_options['blog_description'] );
+}
+
+/**
+ * Render the blog layout for the selective refresh partial.
+ */
+function wellington_customize_partial_blog_layout() {
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content' );
+	}
 }

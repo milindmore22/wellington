@@ -55,6 +55,19 @@
 		} );
 	} );
 
+	// Blog Layout.
+	wp.customize( 'wellington_theme_options[post_layout]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'two-columns' === newval ) {
+				$( 'body' ).addClass( 'post-layout-two-columns post-layout-columns' );
+				$( 'body' ).removeClass( 'post-layout-one-column' );
+			} else {
+				$( 'body' ).addClass( 'post-layout-one-column' );
+				$( 'body' ).removeClass( 'post-layout-two-columns post-layout-columns' );
+			}
+		} );
+	} );
+
 	// Blog Title textfield.
 	wp.customize( 'wellington_theme_options[blog_title]', function( value ) {
 		value.bind( function( to ) {

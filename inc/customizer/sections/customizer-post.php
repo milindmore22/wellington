@@ -25,7 +25,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'wellington_theme_options[excerpt_length]', array(
 		'default'           => 10,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
@@ -160,7 +160,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'wellington_theme_options[post_image_archives]', array(
 		'default'           => true,
 		'type'              => 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wellington_sanitize_checkbox',
 	) );
 
@@ -186,6 +186,17 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'settings' => 'wellington_theme_options[post_image_single]',
 		'type'     => 'checkbox',
 		'priority' => 110,
+	) );
+
+	// Add Partial for Excerpt Length and Post Images on blog and archives.
+	$wp_customize->selective_refresh->add_partial( 'wellington_blog_layout_partial', array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
+			'wellington_theme_options[excerpt_length]',
+			'wellington_theme_options[post_image_archives]',
+		),
+		'render_callback'  => 'wellington_customize_partial_blog_layout',
+		'fallback_refresh' => false,
 	) );
 }
 add_action( 'customize_register', 'wellington_customize_register_post_settings' );
