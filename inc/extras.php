@@ -94,6 +94,9 @@ function wellington_hide_elements() {
 		$elements[] = '.type-post .entry-footer .post-navigation';
 	}
 
+	// Allow plugins to add own elements.
+	$elements = apply_filters( 'wellington_hide_elements', $elements );
+
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
 		return;
