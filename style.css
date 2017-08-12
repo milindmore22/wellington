@@ -1229,10 +1229,6 @@ textarea {
 	margin-top: 0.5em;
 }
 
-.entry-content p:last-child {
-	margin-bottom: 0;
-}
-
 .sticky {}
 
 /* Read more Link */

@@ -34,6 +34,7 @@
 
 		<?php wellington_entry_categories(); ?>
 		<?php wellington_entry_tags(); ?>
+		<?php do_action( 'wellington_author_bio' ); ?>
 		<?php wellington_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
