@@ -26,6 +26,10 @@ For more information about Wellington please go to https://themezee.com/themes/w
 
 == Changelog ==
 
+= 1.2.1 =
+* added action hook for author bio and header search
+* added filter to allow plugins to add own elements to be hidden
+
 = 1.2 =
 * added new section for Blog Settings in Customizer
 * added setting to disable Magazine widgets on blog index
