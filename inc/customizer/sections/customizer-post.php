@@ -21,22 +21,6 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 		'panel'    => 'wellington_options_panel',
 	) );
 
-	// Add Setting and Control for Excerpt Length.
-	$wp_customize->add_setting( 'wellington_theme_options[excerpt_length]', array(
-		'default'           => 10,
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'absint',
-	) );
-
-	$wp_customize->add_control( 'wellington_theme_options[excerpt_length]', array(
-		'label'    => esc_html__( 'Excerpt Length', 'wellington' ),
-		'section'  => 'wellington_section_post',
-		'settings' => 'wellington_theme_options[excerpt_length]',
-		'type'     => 'text',
-		'priority' => 2,
-	) );
-
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Wellington_Customize_Header_Control(
 		$wp_customize, 'wellington_theme_options[postmeta_headline]', array(

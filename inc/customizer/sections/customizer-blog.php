@@ -21,26 +21,6 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 		'panel'    => 'wellington_options_panel',
 	) );
 
-	// Add Blog Layout setting and control.
-	$wp_customize->add_setting( 'wellington_theme_options[post_layout]', array(
-		'default'           => 'one-column',
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'wellington_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'wellington_theme_options[post_layout]', array(
-		'label'    => esc_html__( 'Blog Layout', 'wellington' ),
-		'section'  => 'wellington_section_blog',
-		'settings' => 'wellington_theme_options[post_layout]',
-		'type'     => 'select',
-		'priority' => 10,
-		'choices'  => array(
-			'one-column'  => esc_html__( 'One Column', 'wellington' ),
-			'two-columns' => esc_html__( 'Two Columns', 'wellington' ),
-		),
-	) );
-
 	$wp_customize->selective_refresh->add_partial( 'wellington_theme_options[post_layout]', array(
 		'selector'         => '.site-main .post-wrapper',
 		'render_callback'  => 'wellington_customize_partial_blog_layout',
@@ -60,7 +40,7 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'wellington_section_blog',
 		'settings' => 'wellington_theme_options[blog_title]',
 		'type'     => 'text',
-		'priority' => 20,
+		'priority' => 10,
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'wellington_theme_options[blog_title]', array(
@@ -82,7 +62,7 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'wellington_section_blog',
 		'settings' => 'wellington_theme_options[blog_description]',
 		'type'     => 'textarea',
-		'priority' => 30,
+		'priority' => 20,
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'wellington_theme_options[blog_description]', array(
@@ -91,13 +71,65 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 		'fallback_refresh' => false,
 	) );
 
+	// Add Blog Layout setting and control.
+	$wp_customize->add_setting( 'wellington_theme_options[post_layout]', array(
+		'default'           => 'one-column',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wellington_sanitize_select',
+	) );
+
+	$wp_customize->add_control( 'wellington_theme_options[post_layout]', array(
+		'label'    => esc_html__( 'Blog Layout', 'wellington' ),
+		'section'  => 'wellington_section_blog',
+		'settings' => 'wellington_theme_options[post_layout]',
+		'type'     => 'select',
+		'priority' => 30,
+		'choices'  => array(
+			'one-column'  => esc_html__( 'One Column', 'wellington' ),
+			'two-columns' => esc_html__( 'Two Columns', 'wellington' ),
+		),
+	) );
+
+	// Add Setting and Control for Excerpt Length.
+	$wp_customize->add_setting( 'wellington_theme_options[excerpt_length]', array(
+		'default'           => 10,
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'absint',
+	) );
+
+	$wp_customize->add_control( 'wellington_theme_options[excerpt_length]', array(
+		'label'    => esc_html__( 'Excerpt Length', 'wellington' ),
+		'section'  => 'wellington_section_blog',
+		'settings' => 'wellington_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 40,
+	) );
+
+	// Add Setting and Control for Read More Text.
+	$wp_customize->add_setting( 'wellington_theme_options[read_more_text]', array(
+		'default'           => esc_html__( 'Continue reading', 'wellington' ),
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'wellington_theme_options[read_more_text]', array(
+		'label'    => esc_html__( 'Read More Text', 'wellington' ),
+		'section'  => 'wellington_section_blog',
+		'settings' => 'wellington_theme_options[read_more_text]',
+		'type'     => 'text',
+		'priority' => 50,
+	) );
+
 	// Add Magazine Widgets Headline.
 	$wp_customize->add_control( new Wellington_Customize_Header_Control(
 		$wp_customize, 'wellington_theme_options[blog_magazine_widgets_title]', array(
 			'label'    => esc_html__( 'Magazine Widgets', 'wellington' ),
 			'section'  => 'wellington_section_blog',
 			'settings' => array(),
-			'priority' => 40,
+			'priority' => 60,
 		)
 	) );
 
@@ -114,7 +146,7 @@ function wellington_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'wellington_section_blog',
 		'settings' => 'wellington_theme_options[blog_magazine_widgets]',
 		'type'     => 'checkbox',
-		'priority' => 50,
+		'priority' => 70,
 	) );
 }
 add_action( 'customize_register', 'wellington_customize_register_blog_settings' );
