@@ -24,7 +24,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Wellington_Customize_Header_Control(
 		$wp_customize, 'wellington_theme_options[postmeta_headline]', array(
-			'label'    => esc_html__( 'Post Meta', 'wellington' ),
+			'label'    => esc_html__( 'Post Details', 'wellington' ),
 			'section'  => 'wellington_section_post',
 			'settings' => array(),
 			'priority' => 20,
@@ -40,7 +40,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[meta_date]', array(
-		'label'    => esc_html__( 'Display post date', 'wellington' ),
+		'label'    => esc_html__( 'Display date', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_date]',
 		'type'     => 'checkbox',
@@ -56,7 +56,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[meta_author]', array(
-		'label'    => esc_html__( 'Display post author', 'wellington' ),
+		'label'    => esc_html__( 'Display author', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_author]',
 		'type'     => 'checkbox',
@@ -82,7 +82,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[meta_category]', array(
-		'label'    => esc_html__( 'Display post categories on single posts', 'wellington' ),
+		'label'    => esc_html__( 'Display categories', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_category]',
 		'type'     => 'checkbox',
@@ -98,7 +98,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[meta_tags]', array(
-		'label'    => esc_html__( 'Display post tags on single posts', 'wellington' ),
+		'label'    => esc_html__( 'Display tags', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[meta_tags]',
 		'type'     => 'checkbox',
@@ -114,7 +114,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[post_navigation]', array(
-		'label'    => esc_html__( 'Display post navigation on single posts', 'wellington' ),
+		'label'    => esc_html__( 'Display previous/next post navigation', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[post_navigation]',
 		'type'     => 'checkbox',
@@ -140,7 +140,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[post_image_archives]', array(
-		'label'    => esc_html__( 'Display on blog and archives', 'wellington' ),
+		'label'    => esc_html__( 'Display images on blog and archives', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[post_image_archives]',
 		'type'     => 'checkbox',
@@ -156,7 +156,7 @@ function wellington_customize_register_post_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wellington_theme_options[post_image_single]', array(
-		'label'    => esc_html__( 'Display on single posts', 'wellington' ),
+		'label'    => esc_html__( 'Display image on single posts', 'wellington' ),
 		'section'  => 'wellington_section_post',
 		'settings' => 'wellington_theme_options[post_image_single]',
 		'type'     => 'checkbox',
