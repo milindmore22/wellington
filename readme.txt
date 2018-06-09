@@ -26,6 +26,11 @@ For more information about Wellington please go to https://themezee.com/themes/w
 
 == Changelog ==
 
+= 1.4 =
+* added new setting to change the text of the Read More button
+* updated and restructured blog and post settings
+* improved styling of checkbox labels in comment form
+
 = 1.3 =
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance
