@@ -26,6 +26,9 @@ For more information about Wellington please go to https://themezee.com/themes/w
 
 == Changelog ==
 
+= 1.4.1 =
+* fixed spacing of content area on smaller screens with left sidebar activated
+
 = 1.4 =
 * added new setting to change the text of the Read More button
 * updated and restructured blog and post settings
