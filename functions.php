@@ -180,6 +180,15 @@ function wellington_custom_fonts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'wellington_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'wellington_custom_fonts', 1 );
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function wellington_block_editor_assets() {
+	wp_enqueue_style( 'wellington-editor', get_theme_file_uri( '/assets/css/gutenberg-style.css' ), array(), '20180529', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'wellington_block_editor_assets' );
 
 
 /**
