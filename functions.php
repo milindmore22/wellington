@@ -78,7 +78,6 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
 	}
 endif;
 add_action( 'after_setup_theme', 'wellington_setup' );
