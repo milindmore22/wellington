@@ -737,6 +737,7 @@ textarea {
 	font-size: 44px;
 	font-size: 2.75rem;
 	font-family: 'Magra', sans-serif;
+	line-height: 1.75;
 }
 
 .site-title a:link,
@@ -1676,10 +1677,11 @@ body.date-hidden.author-hidden .content-area .entry-meta {
 
 /* Quote */
 .wp-block-quote.is-style-large {
-	border-left: none;
+	border: none;
 	margin: 0 0 1.5em;
 	padding: 0;
 	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 .wp-block-quote.is-style-large p {
@@ -1702,14 +1704,67 @@ body.date-hidden.author-hidden .content-area .entry-meta {
 }
 
 .wp-block-pullquote blockquote {
-	border-left: none;
+	border: none;
 	margin: 0;
 	padding: 0;
 	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 .wp-block-pullquote blockquote p {
 	margin-bottom: 0.5em;
+}
+
+/* Cover */
+.wp-block-cover {
+	display: flex;
+}
+
+.wp-block-cover-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Block Text Colors */
+.has-primary-color {
+	color: #ee3333;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+.has-light-gray-color {
+	color: #f0f0f0;
+}
+
+.has-dark-gray-color {
+	color: #777777;
+}
+
+.has-black-color {
+	color: #303030;
+}
+
+/* Block Background Colors */
+.has-primary-background-color {
+	background-color: #ee3333;
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-light-gray-background-color {
+	background-color: #f0f0f0;
+}
+
+.has-dark-gray-background-color {
+	background-color: #777777;
+}
+
+.has-black-background-color {
+	background-color: #303030;
 }
 
 /*--------------------------------------------------------------

@@ -78,6 +78,35 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Add custom color palette for Gutenberg.
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html_x( 'Primary', 'block color', 'wellington' ),
+				'slug'  => 'primary',
+				'color' => '#ee3333',
+			),
+			array(
+				'name'  => esc_html_x( 'White', 'block color', 'wellington' ),
+				'slug'  => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html_x( 'Light Gray', 'block color', 'wellington' ),
+				'slug'  => 'light-gray',
+				'color' => '#f0f0f0',
+			),
+			array(
+				'name'  => esc_html_x( 'Dark Gray', 'block color', 'wellington' ),
+				'slug'  => 'dark-gray',
+				'color' => '#777777',
+			),
+			array(
+				'name'  => esc_html_x( 'Black', 'block color', 'wellington' ),
+				'slug'  => 'black',
+				'color' => '#303030',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'wellington_setup' );
@@ -185,7 +214,7 @@ add_action( 'enqueue_block_editor_assets', 'wellington_custom_fonts', 1 );
  * Enqueue editor styles for the new Gutenberg Editor.
  */
 function wellington_block_editor_assets() {
-	wp_enqueue_style( 'wellington-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20180529', 'all' );
+	wp_enqueue_style( 'wellington-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'wellington_block_editor_assets' );
 
