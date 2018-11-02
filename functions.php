@@ -84,7 +84,7 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 			array(
 				'name'  => esc_html_x( 'Primary', 'block color', 'wellington' ),
 				'slug'  => 'primary',
-				'color' => '#ee3333',
+				'color' => apply_filters( 'wellington_primary_color', '#ee3333' ),
 			),
 			array(
 				'name'  => esc_html_x( 'White', 'block color', 'wellington' ),
