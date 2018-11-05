@@ -56,17 +56,17 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'wellington_custom_logo_args', array(
-			'height' => 60,
-			'width' => 300,
+			'height'      => 60,
+			'width'       => 300,
 			'flex-height' => true,
-			'flex-width' => true,
+			'flex-width'  => true,
 		) ) );
 
 		// Set up the WordPress core custom header feature.
 		add_theme_support( 'custom-header', apply_filters( 'wellington_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1280,
-			'height' => 400,
+			'width'       => 1280,
+			'height'      => 400,
 			'flex-height' => true,
 		) ) );
 
@@ -82,27 +82,27 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 		// Add custom color palette for Gutenberg.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => esc_html_x( 'Primary', 'block color', 'wellington' ),
+				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'wellington' ),
 				'slug'  => 'primary',
 				'color' => apply_filters( 'wellington_primary_color', '#ee3333' ),
 			),
 			array(
-				'name'  => esc_html_x( 'White', 'block color', 'wellington' ),
+				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'wellington' ),
 				'slug'  => 'white',
 				'color' => '#ffffff',
 			),
 			array(
-				'name'  => esc_html_x( 'Light Gray', 'block color', 'wellington' ),
+				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'wellington' ),
 				'slug'  => 'light-gray',
 				'color' => '#f0f0f0',
 			),
 			array(
-				'name'  => esc_html_x( 'Dark Gray', 'block color', 'wellington' ),
+				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'wellington' ),
 				'slug'  => 'dark-gray',
 				'color' => '#777777',
 			),
 			array(
-				'name'  => esc_html_x( 'Black', 'block color', 'wellington' ),
+				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'wellington' ),
 				'slug'  => 'black',
 				'color' => '#303030',
 			),
@@ -132,34 +132,34 @@ add_action( 'after_setup_theme', 'wellington_content_width', 0 );
 function wellington_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'wellington' ),
-		'id' => 'sidebar-1',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'wellington' ),
+		'name'          => esc_html__( 'Sidebar', 'wellington' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'wellington' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'wellington' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'wellington' ),
+		'name'          => esc_html__( 'Header', 'wellington' ),
+		'id'            => 'header',
+		'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'wellington' ),
 		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="header-widget-title">',
+		'after_title'   => '</h4>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'wellington' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'wellington' ),
+		'name'          => esc_html__( 'Magazine Homepage', 'wellington' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'wellington' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 }
 add_action( 'widgets_init', 'wellington_widgets_init' );
@@ -193,7 +193,6 @@ function wellington_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'wellington_scripts' );
 
@@ -202,13 +201,11 @@ add_action( 'wp_enqueue_scripts', 'wellington_scripts' );
  * Enqueue custom fonts.
  */
 function wellington_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'wellington-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'wellington_custom_fonts', 1 );
 add_action( 'enqueue_block_editor_assets', 'wellington_custom_fonts', 1 );
+
 
 /**
  * Enqueue editor styles for the new Gutenberg Editor.

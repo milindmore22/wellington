@@ -170,12 +170,31 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 	margin-bottom: 0.5em;
 }
 
+.wp-block-pullquote.alignleft {
+	margin-right: 1.5em;
+}
+
+.wp-block-pullquote.alignright {
+	margin-left: 1.5em;
+}
+
 /* Cover */
 .edit-post-visual-editor .editor-block-list__block p.wp-block-cover-text {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 2em;
 	line-height: 1.25;
+}
+
+/* Table */
+.wp-block-table td,
+.wp-block-table th {
+	padding: 0;
+    border: 1px solid #ddd;
+}
+
+.wp-block-table__cell-content {
+	padding: 0.3em 0.6em;
 }
 
 /*--------------------------------------------------------------
