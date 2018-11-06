@@ -26,6 +26,11 @@ For more information about Wellington please go to https://themezee.com/themes/w
 
 == Changelog ==
 
+= 1.5 =
+* added styling for Gutenberg blocks
+* added custom color palette for Gutenberg
+* added editor styling for WordPress 5.0
+
 = 1.4.1 =
 * fixed spacing of content area on smaller screens with left sidebar activated
 
