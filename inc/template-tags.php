@@ -396,10 +396,12 @@ function wellington_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'wellington' ),
-			'<a href="' . esc_url( __( 'http://wordpress.org', 'wellington' ) ) . '" title="WordPress">WordPress</a>',
+		<?php
+		// translators: Theme Name
+		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'wellington' ),
 			'<a href="https://themezee.com/themes/wellington/" title="Wellington WordPress Theme">Wellington</a>'
-		); ?>
+		);
+		?>
 	</span>
 
 	<?php
