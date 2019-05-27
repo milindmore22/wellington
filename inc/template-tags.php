@@ -397,9 +397,10 @@ function wellington_footer_text() {
 
 	<span class="credit-link">
 		<?php
-		// translators: Theme Name
-		printf( esc_html__( 'WordPress Theme: %s by ThemeZee.', 'wellington' ),
-			'<a href="https://themezee.com/themes/wellington/" title="Wellington WordPress Theme">Wellington</a>'
+		// translators: Theme Name and Link to ThemeZee.
+		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'wellington' ),
+			esc_html__( 'Wellington', 'wellington' ),
+			'<a href="https://themezee.com/" target="_blank" rel="nofollow">ThemeZee</a>'
 		);
 		?>
 	</span>
