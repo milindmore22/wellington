@@ -237,6 +237,19 @@ add_action( 'after_setup_theme', 'wellington_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function wellington_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'             => esc_html__( 'Wellington Single Post', 'wellington' ),
+		'wellington-thumbnail-large' => esc_html__( 'Wellington Magazine Post', 'wellington' ),
+		'wellington-thumbnail-small' => esc_html__( 'Wellington Thumbnail', 'wellington' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'wellington_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
