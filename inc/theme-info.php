@@ -47,7 +47,8 @@ function wellington_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/wellington/', 'wellington' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=wellington&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'wellington' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=wellington&utm_source=theme-info&utm_campaign=wellington" target="_blank"><?php esc_html_e( 'Theme Demo', 'wellington' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/wellington-documentation/', 'wellington' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=wellington&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'wellington' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/wellington/reviews/?filter=5', 'wellington' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'wellington' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=wellington', 'wellington' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'wellington' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/wellington/reviews/', 'wellington' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'wellington' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -149,7 +150,7 @@ function wellington_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'wellington' ),
 				$theme->display( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'wellington' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=wellington" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/wellington/reviews/?filter=5', 'wellington' ) . '" title="' . esc_attr__( 'Review Wellington', 'wellington' ) . '">' . esc_html__( 'rate it', 'wellington' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/wellington/reviews/', 'wellington' ) . '" title="' . esc_attr__( 'Review Wellington', 'wellington' ) . '">' . esc_html__( 'rate it', 'wellington' ) . '</a>'); ?>
 			</p>
 
 		</div>
