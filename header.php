@@ -20,6 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action( 'wp_body_open' ); ?>
 
 	<div id="header-top" class="header-bar-wrap"><?php do_action( 'wellington_header_bar' ); ?></div>
 
