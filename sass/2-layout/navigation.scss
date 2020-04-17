@@ -1,0 +1,116 @@
+.primary-navigation-wrap {
+	position: relative;
+	background: #303030;
+}
+
+.main-navigation-toggle {
+	display: none;
+}
+
+.main-navigation-menu {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-position: outside;
+	list-style-type: none;
+}
+
+.main-navigation-menu li {
+	float: left;
+}
+
+.main-navigation-menu a {
+	display: block;
+	margin: 0;
+	padding: 1em 1.5em;
+	color: #fff;
+	text-decoration: none;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	font-family: 'Gudea', Tahoma, Arial;
+}
+
+.main-navigation-menu > .menu-item-has-children > a:after {
+	display: inline-block;
+	margin: 0.5em 0 0 0.3em;
+	content: '\f431';
+	vertical-align: top;
+	text-decoration: inherit;
+	font-size: 16px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.main-navigation-menu a:link,
+.main-navigation-menu a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.main-navigation-menu a:hover,
+.main-navigation-menu a:active {
+	color: rgba(255,255,255,0.5);
+}
+
+.main-navigation-menu ul {
+	position: absolute;
+	z-index: 99;
+	display: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #fff;
+	background: #303030;
+	color: #fff;
+	list-style-position: outside;
+	list-style-type: none;
+}
+
+.main-navigation-menu ul li{
+	position: relative;
+	float: none;
+	margin: 0;
+}
+
+.main-navigation-menu ul a {
+	padding: 1em;
+	min-width: 250px;
+	min-width: 16rem;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.main-navigation-menu ul .menu-item-has-children > a:after {
+	display: inline-block;
+	margin: 0.3em 0 0 0.3em;
+	content: '\f431';
+	vertical-align: top;
+	text-decoration: inherit;
+	font-size: 14px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.main-navigation-menu li ul ul {
+	top: 1px;
+	left: 100%;
+	border-top: none;
+}
+
+.main-navigation-menu li.menu-item-has-children:hover > ul,
+.main-navigation-menu li.page_item_has_children:hover > ul,
+.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
+	display: block;
+}
+
+.main-navigation-menu li.current-menu-item > a {
+	background: rgba(255,255,255,0.075);
+}
