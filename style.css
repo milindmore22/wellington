@@ -1110,35 +1110,8 @@ textarea {
 	text-decoration: underline;
 }
 
-/* Read more Link */
-.more-link {
-	display: inline-block;
-	margin: 0;
-	padding: 0.5em 1em;
-	background: #ee3333;
-	color: #fff;
-	text-decoration: none;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-.more-link:link,
-.more-link:visited {
-	color: #fff;
-}
-
-.more-link:hover,
-.more-link:active {
-	background: #303030;
-	text-decoration: none;
-}
-
-.more-link:after {
-	content: " \00BB";
-}
-
-.entry-content .more-link {
-	text-decoration: none;
+.sticky {
+	background: none;
 }
 
 /* Page Links | wp_link_pages() */
@@ -1170,7 +1143,7 @@ textarea {
 	color: #666;
 }
 
-.entry-meta span:after {
+.entry-meta span::after {
 	display: inline-block;
 	margin: 0 0.5em;
 	color: #999;
@@ -1180,7 +1153,7 @@ textarea {
 	-webkit-font-smoothing: antialiased;
 }
 
-.entry-meta span:last-child:after {
+.entry-meta span:last-child::after {
 	display: none;
 }
 
@@ -1194,13 +1167,13 @@ textarea {
 	font-size: 0.875rem;
 }
 
-.entry-categories .meta-categories:before,
-.entry-categories .meta-categories:after {
+.entry-categories .meta-categories::before,
+.entry-categories .meta-categories::after {
 	display: table;
 	content: "";
 }
 
-.entry-categories .meta-categories:after {
+.entry-categories .meta-categories::after {
 	clear: both;
 }
 
@@ -1236,9 +1209,9 @@ body.author-hidden .post-slider .entry-meta .meta-author {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-body.author-hidden .type-post .entry-meta .meta-date:after,
+body.author-hidden .type-post .entry-meta .meta-date::after,
 body.date-hidden.author-hidden .content-area .type-post .entry-meta,
-body.author-hidden .post-slider .entry-meta .meta-date:after,
+body.author-hidden .post-slider .entry-meta .meta-date::after,
 body.date-hidden.author-hidden .post-slider .entry-meta {
 	display: none;
 }
@@ -1254,16 +1227,16 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	font-size: 0.875rem;
 }
 
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:before,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
 	display: table;
 	content: "";
 }
 
-.widget_tag_cloud .tagcloud:after,
-.entry-tags .meta-tags:after {
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
 	clear: both;
 }
 
@@ -1295,6 +1268,37 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	color: #fff;
 }
 
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0.5em 1em;
+	background: #ee3333;
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.more-link:link,
+.more-link:visited {
+	color: #fff;
+}
+
+.more-link:hover,
+.more-link:active {
+	background: #303030;
+	text-decoration: none;
+}
+
+.more-link::after {
+	content: " \00BB";
+}
+
+.entry-content .more-link {
+	text-decoration: none;
+}
+
 /* Post Navigation */
 .post-navigation {
 	margin: 1em 0 0;
@@ -1310,73 +1314,19 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	float: right;
 }
 
-.post-navigation .nav-links .nav-previous a:before {
+.post-navigation .nav-links .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next a:after {
+.post-navigation .nav-links .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
 }
 
-/* Theme Pagination */
-.pagination {
-	margin: 0 0 3em;
-}
-
-.pagination a,
-.pagination .current {
-	display: inline-block;
-	margin: 0 3px 3px 0;
-	padding: 0.4em 1em;
-	background: #303030;
-	color: #fff;
-	text-align: center;
-	text-decoration: none;
-}
-
-.pagination a:link,
-.pagination a:visited {
-	color: #fff;
-}
-
-.pagination a:hover,
-.pagination a:active,
-.pagination .current {
-	background: #ee3333;
-}
-
-/* Infinite Scroll Pagination */
-.infinite-scroll .pagination {
-	display: none;
-}
-
-.infinite-scroll #infinite-handle,
-.infinite-scroll .infinite-loader {
-	width: 100%;
-	text-align: center;
-}
-
-.infinite-scroll .infinite-loader .spinner {
-	bottom: -1em;
-	left: auto;
-	margin: 0 auto;
-}
-
-.infinite-scroll #infinite-handle span {
-	display: inline-block;
-	margin: 0 0 3em;
-	padding: 0.4em 1em;
-	background: #303030;
-	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
-}
-
-.infinite-scroll #infinite-handle span:hover {
-	background: #ee3333;
-}
+/*--------------------------------------------------------------
+# - Archives and Blog Layouts
+--------------------------------------------------------------*/
 
 /* Archives and Search Heading */
 .page-header {
@@ -1398,83 +1348,6 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .archive-description p {
 	margin-bottom: 0;
 }
-
-/* Breadcrumbs */
-.breadcrumbs {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0.5em 1.5em;
-	width: 100%;
-	border-bottom: 1px solid #ddd;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-}
-
-.breadcrumbs-container {
-	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.breadcrumbs .trail-browse,
-.breadcrumbs .trail-items,
-.breadcrumbs .trail-items li {
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-
-.breadcrumbs .trail-browse {
-	margin-right: 0.5em;
-	font-weight: normal;
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.breadcrumbs .trail-items {
-	list-style: none;
-}
-
-.breadcrumbs .trail-items li::after {
-	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
-}
-
-.trail-separator-slash .trail-items li::after {
-	content: "\002F";
-}
-
-.trail-separator-dash .trail-items li::after {
-	content: "\2013";
-}
-
-.trail-separator-bull .trail-items li::after {
-	content: "\2022";
-}
-
-.trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
-}
-
-.trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
-}
-
-.trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
-}
-
-.trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
-}
-
-.breadcrumbs .trail-items li:last-of-type::after {
-	display: none;
-}
-
-/*--------------------------------------------------------------
-## 12.1 - Post Layouts
---------------------------------------------------------------*/
 
 /* Post Styling */
 .post-wrapper .type-post .entry-title {
@@ -1534,9 +1407,63 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	width: 33.3333333333333%;
 }
 
-/*--------------------------------------------------------------
-# - Archives and Blog Layouts
---------------------------------------------------------------*/
+/* Theme Pagination */
+.pagination {
+	margin: 0 0 3em;
+}
+
+.pagination a,
+.pagination .current {
+	display: inline-block;
+	margin: 0 3px 3px 0;
+	padding: 0.4em 1em;
+	background: #303030;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+.pagination a:link,
+.pagination a:visited {
+	color: #fff;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination .current {
+	background: #ee3333;
+}
+
+/* Infinite Scroll Pagination */
+.infinite-scroll .pagination {
+	display: none;
+}
+
+.infinite-scroll #infinite-handle,
+.infinite-scroll .infinite-loader {
+	width: 100%;
+	text-align: center;
+}
+
+.infinite-scroll .infinite-loader .spinner {
+	bottom: -1em;
+	left: auto;
+	margin: 0 auto;
+}
+
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin: 0 0 3em;
+	padding: 0.4em 1em;
+	background: #303030;
+	text-decoration: none;
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.infinite-scroll #infinite-handle span:hover {
+	background: #ee3333;
+}
 
 /*--------------------------------------------------------------
 # - Blocks
@@ -2160,6 +2087,80 @@ object {
 /*--------------------------------------------------------------
 # - Plugins
 --------------------------------------------------------------*/
+
+/* Breadcrumbs */
+.breadcrumbs {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em 1.5em;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.breadcrumbs-container {
+	color: #222;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs .trail-browse {
+	margin-right: 0.5em;
+	font-weight: normal;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.breadcrumbs .trail-items li::after {
+	padding: 0 0.5em;
+	content: "\00bb"; /* Raquo */
+}
+
+.trail-separator-slash .trail-items li::after {
+	content: "\002F";
+}
+
+.trail-separator-dash .trail-items li::after {
+	content: "\2013";
+}
+
+.trail-separator-bull .trail-items li::after {
+	content: "\2022";
+}
+
+.trail-separator-arrow-bracket .trail-items li::after {
+	content: "\003e";
+}
+
+.trail-separator-raquo .trail-items li::after {
+	content: "\00bb";
+}
+
+.trail-separator-single-arrow .trail-items li::after {
+	content: "\2192";
+}
+
+.trail-separator-double-arrow .trail-items li::after {
+	content: "\21D2";
+}
+
+.breadcrumbs .trail-items li:last-of-type::after {
+	display: none;
+}
+
 :root {
 	--tz-column-gap: 1.5em;
 }
