@@ -1659,10 +1659,6 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	color: #ee3333;
 }
 
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
 /* Theme Search Widget */
 .search-form {
 	position: relative;
@@ -1713,7 +1709,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
+# - Magazine Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -1em;
