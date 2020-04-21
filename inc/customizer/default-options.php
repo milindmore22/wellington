@@ -49,6 +49,7 @@ function wellington_theme_options() {
 function wellington_default_options() {
 
 	$default_options = array(
+		'retina_logo'           => false,
 		'site_title'            => true,
 		'site_description'      => false,
 		'custom_header_link'    => '',
