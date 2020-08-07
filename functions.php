@@ -190,10 +190,15 @@ function wellington_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'wellington-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20160719' );
-
-	// Passing Parameters to navigation.js.
-	wp_localize_script( 'wellington-jquery-navigation', 'wellington_menu_title', esc_html__( 'Navigation', 'wellington' ) );
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'wellington-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$wellington_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'wellington' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'wellington' ),
+			'icon'     => wellington_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'wellington-navigation', 'wellingtonScreenReaderText', $wellington_l10n );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
