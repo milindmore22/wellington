@@ -52,6 +52,11 @@ function wellington_body_classes( $classes ) {
 		$classes[] = 'author-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( wellington_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'wellington_body_classes' );

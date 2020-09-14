@@ -19,7 +19,7 @@ function wellington_slider_scripts() {
 	$theme_options = wellington_theme_options();
 
 	// Register and enqueue FlexSlider JS and CSS if necessary.
-	if ( true === $theme_options['slider_active'] && is_front_page() ) :
+	if ( ( true === $theme_options['slider_active'] && is_front_page() ) && ! wellington_is_amp() ) :
 
 		// FlexSlider JS.
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
@@ -128,7 +128,7 @@ function wellington_slider() {
 	$theme_options = wellington_theme_options();
 
 	// Display post slider only if activated.
-	if ( true === $theme_options['slider_active'] && is_front_page() ) :
+	if ( ( true === $theme_options['slider_active'] && is_front_page() ) && ! wellington_is_amp() ) :
 
 		get_template_part( 'template-parts/post-slider' );
 
