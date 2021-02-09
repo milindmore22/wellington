@@ -1,16 +1,16 @@
 .footer-wrap {
-	background: #303030;
+	@include background(--footer-background-color);
 }
 
 .site-footer .site-info {
 	float: left;
 	padding: 3em;
-	color: #fff;
+	@include color(--footer-text-color);
 }
 
 .site-footer a:link,
 .site-footer a:visited {
-	color: #fff;
+	@include color(--footer-link-color);
 	text-decoration: underline;
 }
 

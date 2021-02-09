@@ -1,6 +1,7 @@
 .header-main {
 	padding: 2.5em 3em;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	border-bottom: 1px solid;
+	@include border-color(--page-border-color);
 }
 
 .site-branding {
@@ -22,7 +23,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--site-title-color);
 	text-decoration: none;
 	@include font-size(44);
 	@include font-family(--title-font);
@@ -33,12 +34,12 @@
 
 .site-title a:link,
 .site-title a:visited {
-	color: #303030;
+	@include color(--site-title-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #ee3333;
+	@include color(--site-title-hover-color);
 }
 
 .site-branding .custom-logo {

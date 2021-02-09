@@ -3,7 +3,7 @@
 	padding: 0;
 	max-width: 1280px;
 	width: 100%;
-	background: #fff;
+	@include background(--page-background-color);
 	box-shadow: 0 0 2px #aaa;
 }
 
@@ -27,8 +27,9 @@
 	box-sizing: border-box;
 	padding: 3em 3em 0;
 	width: 30%;
-	border-left: 1px solid #ddd;
-	background: #fafafa;
+	border-left: 1px solid;
+	@include border-color(--page-border-color);
+	@include background(--sidebar-background-color);
 }
 
 /* No Sidebar & Centered Layout Template */
