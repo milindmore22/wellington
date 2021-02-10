@@ -9,7 +9,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--widget-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(20);
@@ -29,7 +29,8 @@
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -93,12 +94,12 @@
 	float: right;
 }
 
-.comment-navigation .nav-previous a:before {
+.comment-navigation .nav-previous a::before {
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.comment-navigation .nav-next a:after {
+.comment-navigation .nav-next a::after {
 	margin-left: 4px;
 	content: "\00BB";
 }

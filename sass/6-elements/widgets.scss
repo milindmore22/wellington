@@ -14,7 +14,7 @@
 	display: block;
 	margin: 0;
 	padding: 0;
-	color: #303030;
+	@include color(--widget-title-color);
 	@include font-size(20);
 	@include font-family(--widget-title-font);
 	@include font-weight(--widget-title-font-weight);
@@ -41,12 +41,12 @@
 
 .widget-title a:link,
 .widget-title a:visited {
-	color: #303030;
+	@include color(--widget-title-color);
 }
 
 .widget-title a:hover,
 .widget-title a:active {
-	color: #ee3333;
+	@include color(--widget-title-hover-color);
 }
 
 /* Theme Search Widget */

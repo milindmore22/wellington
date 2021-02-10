@@ -2,25 +2,25 @@
 .entry-meta {
 	margin: 0.5em 0 0;
 	padding: 0;
-	color: #999;
+	@include color(--light-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
 .entry-meta a:link,
 .entry-meta a:visited {
-	color: #999;
+	@include color(--light-text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: #666;
+	@include color(--medium-text-color);
 }
 
 .entry-meta span::after {
 	display: inline-block;
 	margin: 0 0.5em;
-	color: #999;
+	@include color(--light-text-color);
 	content: '\2044';
 	vertical-align: middle;
 	font: normal 16px 'Genericons';
@@ -56,7 +56,7 @@
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.4em 0.8em;
-	background: #ee3333;
+	@include background(--button-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -65,13 +65,13 @@
 
 .entry-categories .meta-categories a:link,
 .entry-categories .meta-categories a:visited {
-	color: #fff;
+	@include color(--button-text-color);
 }
 
 .entry-categories .meta-categories a:hover,
 .entry-categories .meta-categories a:active {
-	background: #ddd;
-	color: #303030;
+	@include background(--meta-background-color);
+	@include color(--text-color);
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -120,7 +120,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.2em 0.5em;
-	background: #ddd;
+	@include background(--meta-background-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 13px !important;
@@ -131,13 +131,13 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .widget_tag_cloud .tagcloud a:visited,
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
-	color: #303030;
+	@include color(--text-color);
 }
 
 .widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #ee3333;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }

@@ -30,12 +30,14 @@
 	@include variable(--navi-border-color, $themeColors);
 	@include variable(--navi-current-color, $themeColors);
 
-	// Titles
+	// Posts
 	@include variable(--title-color, $themeColors);
 	@include variable(--title-hover-color, $themeColors);
+	@include variable(--meta-background-color, $themeColors);
+
+	// Widgets
 	@include variable(--widget-title-color, $themeColors);
 	@include variable(--widget-title-hover-color, $themeColors);
-	@include variable(--widget-title-border-color, $themeColors);
 
 	// Footer
 	@include variable(--footer-background-color, $themeColors);

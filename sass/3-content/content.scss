@@ -11,7 +11,7 @@
 .entry-title {
 	margin: 0.15em 0 0.2em;
 	padding: 0;
-	color: #303030;
+	@include color(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(36);
@@ -23,13 +23,13 @@
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #303030;
+	@include color(--title-color);
 	text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #ee3333;
+	@include color(--title-hover-color);
 }
 
 .type-post .wp-post-image,
