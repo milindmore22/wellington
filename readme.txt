@@ -199,15 +199,23 @@ Copyright: 2015 WooThemes, http://www.woothemes.com
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 @afarkas @jdalton @jon_neal @rem
 
-6. Gudea Font - https://www.google.com/fonts/specimen/Gudea
+6. svgxuse - https://github.com/Keyamoon/svgxuse
+License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
+Copyright: 2017 IcoMoon.io
+
+7. WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+8. Gudea Font - https://www.google.com/fonts/specimen/Gudea
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: Agustina Mingote
 
-7. Magra Font - https://www.google.com/fonts/specimen/Magra
+9. Magra Font - https://www.google.com/fonts/specimen/Magra
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: FontFuror
 
-8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+10. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/bottom-bracket-gear-mountain-bike-1204870/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
