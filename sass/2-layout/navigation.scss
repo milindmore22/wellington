@@ -21,8 +21,7 @@
 }
 
 .main-navigation > ul {
-	border-top: 1px solid;
-	@include border-color(--navi-color);
+	border-top: 1px solid #fff;
 }
 
 /* Hide the menu on small screens when JavaScript is available. */

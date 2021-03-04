@@ -90,6 +90,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--footer-background-color: #303030;
 	--footer-text-color: #fff;
 	--footer-link-color: #fff;
+	--footer-link-hover-color: rgba(255, 255, 255, 0.5);
+	--footer-border-color: rgba(255, 255, 255, 0.1);
 	--text-font: "Gudea", arial, helvetica, sans-serif;
 	--title-font: "Magra", arial, helvetica, sans-serif;
 	--navi-font: "Gudea", arial, helvetica, sans-serif;
@@ -912,9 +914,7 @@ textarea {
 }
 
 .main-navigation > ul {
-	border-top: 1px solid;
-	border-color: #fff;
-	border-color: var(--navi-color);
+	border-top: 1px solid #fff;
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -1960,7 +1960,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 .search-form .search-submit .genericon-search {
 	display: inline-block;
 	padding: 0.05em 0 0.55em 0.45em;
-	color: #fff;
+	color: currentColor;
 	content: '\f400';
 	vertical-align: middle;
 	text-decoration: inherit;
@@ -2370,7 +2370,9 @@ object {
 	margin: 0;
 	padding: 0.5em 1.5em;
 	width: 100%;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid;
+	border-color: #ddd;
+	border-color: var(--page-border-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
