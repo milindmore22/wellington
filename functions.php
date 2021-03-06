@@ -79,35 +79,6 @@ if ( ! function_exists( 'wellington_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// Add custom color palette for Gutenberg.
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'wellington' ),
-				'slug'  => 'primary',
-				'color' => apply_filters( 'wellington_primary_color', '#ee3333' ),
-			),
-			array(
-				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'wellington' ),
-				'slug'  => 'white',
-				'color' => '#ffffff',
-			),
-			array(
-				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'wellington' ),
-				'slug'  => 'light-gray',
-				'color' => '#f0f0f0',
-			),
-			array(
-				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'wellington' ),
-				'slug'  => 'dark-gray',
-				'color' => '#777777',
-			),
-			array(
-				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'wellington' ),
-				'slug'  => 'black',
-				'color' => '#303030',
-			),
-		) );
-
 		// Add support for responsive embed blocks.
 		add_theme_support( 'responsive-embeds' );
 	}
@@ -249,15 +220,6 @@ function wellington_get_fonts_url() {
 
 
 /**
- * Enqueue editor styles for the new Gutenberg Editor.
- */
-function wellington_block_editor_assets() {
-	wp_enqueue_style( 'wellington-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20191118', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'wellington_block_editor_assets' );
-
-
-/**
  * Add custom sizes for featured images
  */
 function wellington_add_image_sizes() {
@@ -306,6 +268,9 @@ require get_template_directory() . '/inc/extras.php';
 
 // Include Template Functions.
 require get_template_directory() . '/inc/template-tags.php';
+
+// Include Gutenberg Features.
+require get_template_directory() . '/inc/gutenberg.php';
 
 // Include support functions for Theme Addons.
 require get_template_directory() . '/inc/addons.php';
