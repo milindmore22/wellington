@@ -46,7 +46,7 @@
 
 .widget-title a:hover,
 .widget-title a:active {
-	@include color(--widget-title-hover-color);
+	text-decoration: underline;
 }
 
 /* Theme Search Widget */

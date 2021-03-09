@@ -18,12 +18,12 @@ function wellington_gutenberg_support() {
 
 	// Define block color palette.
 	$color_palette = apply_filters( 'wellington_color_palette', array(
-		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
-		'light_gray_color' => '#f0f0f0',
+		'primary_color'    => '#ee3333',
+		'secondary_color'  => '#d51a1a',
+		'tertiary_color'   => '#bb0000',
+		'accent_color'     => '#3333ee',
+		'highlight_color'  => '#eeee33',
+		'light_gray_color' => '#fafafa',
 		'gray_color'       => '#999999',
 		'dark_gray_color'  => '#303030',
 	) );

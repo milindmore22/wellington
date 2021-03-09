@@ -4,9 +4,9 @@ Theme URI: https://themezee.com/themes/wellington/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Wellington is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors. The theme includes two different post layouts, a featured post slider and thoughtful theme settings in the Customizer.
-Version: 2.0
+Version: 2.0.1
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.6
 AMP: true
 License: GNU General Public License v2 or later
@@ -60,12 +60,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #cc5555;
-	--secondary-color: #5d7b94;
-	--tertiary-color: #90aec7;
-	--accent-color: #60945d;
-	--highlight-color: #915d94;
-	--light-gray-color: #f0f0f0;
+	--primary-color: #ee3333;
+	--secondary-color: #d51a1a;
+	--tertiary-color: #bb0000;
+	--accent-color: #3333ee;
+	--highlight-color: #eeee33;
+	--light-gray-color: #fafafa;
 	--gray-color: #999;
 	--dark-gray-color: #303030;
 	--text-color: #303030;
@@ -94,7 +94,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--title-hover-color: #ee3333;
 	--meta-background-color: #ddd;
 	--widget-title-color: #303030;
-	--widget-title-hover-color: #ee3333;
 	--footer-background-color: #303030;
 	--footer-text-color: #fff;
 	--footer-link-color: #fff;
@@ -1831,31 +1830,31 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 /* Block Text Colors */
 .has-primary-color,
 .wp-block-button__link.has-primary-color {
-	color: #cc5555;
+	color: #ee3333;
 	color: var(--primary-color);
 }
 
 .has-secondary-color,
 .wp-block-button__link.has-secondary-color {
-	color: #5d7b94;
+	color: #d51a1a;
 	color: var(--secondary-color);
 }
 
 .has-tertiary-color,
 .wp-block-button__link.has-tertiary-color {
-	color: #90aec7;
+	color: #bb0000;
 	color: var(--tertiary-color);
 }
 
 .has-accent-color,
 .wp-block-button__link.has-accent-color {
-	color: #60945d;
+	color: #3333ee;
 	color: var(--accent-color);
 }
 
 .has-highlight-color,
 .wp-block-button__link.has-highlight-color {
-	color: #915d94;
+	color: #eeee33;
 	color: var(--highlight-color);
 }
 
@@ -1866,7 +1865,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 
 .has-light-gray-color,
 .wp-block-button__link.has-light-gray-color {
-	color: #f0f0f0;
+	color: #fafafa;
 	color: var(--light-gray-color);
 }
 
@@ -1890,31 +1889,31 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 /* Block Background Colors */
 .has-primary-background-color,
 .has-primary-background-color[class] {
-	background-color: #cc5555;
+	background-color: #ee3333;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color[class] {
-	background-color: #5d7b94;
+	background-color: #d51a1a;
 	background-color: var(--secondary-color);
 }
 
 .has-tertiary-background-color,
 .has-tertiary-background-color[class] {
-	background-color: #90aec7;
+	background-color: #bb0000;
 	background-color: var(--tertiary-color);
 }
 
 .has-accent-background-color,
 .has-accent-background-color[class] {
-	background-color: #60945d;
+	background-color: #3333ee;
 	background-color: var(--accent-color);
 }
 
 .has-highlight-background-color,
 .has-highlight-background-color[class] {
-	background-color: #915d94;
+	background-color: #eeee33;
 	background-color: var(--highlight-color);
 }
 
@@ -1925,7 +1924,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 
 .has-light-gray-background-color,
 .has-light-gray-background-color[class] {
-	background-color: #f0f0f0;
+	background-color: #fafafa;
 	background-color: var(--light-gray-color);
 }
 
@@ -2004,8 +2003,7 @@ body.date-hidden.author-hidden .post-slider .entry-meta {
 
 .widget-title a:hover,
 .widget-title a:active {
-	color: #ee3333;
-	color: var(--widget-title-hover-color);
+	text-decoration: underline;
 }
 
 /* Theme Search Widget */
