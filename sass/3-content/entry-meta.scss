@@ -23,8 +23,6 @@
 	@include color(--light-text-color);
 	content: '\2044';
 	vertical-align: middle;
-	font: normal 16px 'Genericons';
-	-webkit-font-smoothing: antialiased;
 }
 
 .entry-meta span:last-child::after {
