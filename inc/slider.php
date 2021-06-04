@@ -27,11 +27,7 @@ function wellington_slider_scripts() {
 		// Register and enqueue slider setup.
 		wp_enqueue_script( 'wellington-slider', get_template_directory_uri() . '/assets/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
 
-		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'wellington-slider', get_template_directory_uri() . '/assets/css/flexslider.css', array(), '20210304' );
-
 	endif;
-
 }
 add_action( 'wp_enqueue_scripts', 'wellington_slider_scripts' );
 
