@@ -16,6 +16,8 @@ get_header(); ?>
 		// Display Magazine Homepage Widgets.
 		wellington_magazine_widgets();
 
+		do_action( 'wellington_before_blog' );
+
 		if ( have_posts() ) :
 
 			wellington_blog_title(); ?>

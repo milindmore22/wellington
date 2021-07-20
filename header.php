@@ -22,11 +22,15 @@
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 
+	<?php do_action( 'wellington_before_site' ); ?>
+
 	<div id="header-top" class="header-bar-wrap"><?php do_action( 'wellington_header_bar' ); ?></div>
 
 	<div id="page" class="hfeed site">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wellington' ); ?></a>
+
+		<?php do_action( 'wellington_before_header' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
@@ -56,6 +60,8 @@
 			<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
 
 		</header><!-- #masthead -->
+
+		<?php do_action( 'wellington_after_header' ); ?>
 
 		<?php wellington_header_image(); ?>
 
