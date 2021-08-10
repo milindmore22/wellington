@@ -151,7 +151,7 @@ function wellington_scripts() {
 	wp_enqueue_style( 'wellington-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and Enqueue Safari Flexbox CSS fixes.
-	wp_enqueue_style( 'wellington-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
+	wp_enqueue_style( 'wellington-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20210810' );
 
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
